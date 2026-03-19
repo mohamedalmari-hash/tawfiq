@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Permit & Inspection Agent — Construction with Style</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-icon">⚙</div>
+        <div class="brand-text">
+          <span class="brand-name">Construction with Style</span>
+          <span class="brand-sub">Permit & Inspection Agent</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-label">Quick Actions</div>
+        <button class="quick-btn" data-prompt="I need to pull a permit for a new project.">
+          <span class="quick-icon">📋</span>
+          Pull a Permit
+        </button>
+        <button class="quick-btn" data-prompt="I need to schedule an inspection.">
+          <span class="quick-icon">🔍</span>
+          Schedule Inspection
+        </button>
+        <button class="quick-btn" data-prompt="What documents do I need for a residential remodel permit in San José?">
+          <span class="quick-icon">📄</span>
+          Document Checklist
+        </button>
+        <button class="quick-btn" data-prompt="What are the current permit fees for a $50,000 project valuation?">
+          <span class="quick-icon">💰</span>
+          Fee Estimate
+        </button>
+      </nav>
+
+      <div class="sidebar-contacts">
+        <div class="nav-section-label">Key Contacts</div>
+        <div class="contact-item">
+          <span class="contact-label">Building Division</span>
+          <a href="tel:4085353555" class="contact-value">(408) 535-3555</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Inspection Line</span>
+          <a href="tel:4085353550" class="contact-value">(408) 535-3550</a>
+        </div>
+        <div class="contact-item">
+          <span class="contact-label">Email</span>
+          <a href="mailto:building@sanjoseca.gov" class="contact-value">building@sanjoseca.gov</a>
+        </div>
+      </div>
+
+      <div class="sidebar-footer">
+        <button id="clearBtn" class="clear-btn">
+          <span>🗑</span> Clear Conversation
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main chat area -->
+    <main class="main">
+      <header class="chat-header">
+        <div class="header-status">
+          <span class="status-dot"></span>
+          <span>Agent Online</span>
+        </div>
+        <div class="header-info">San José, CA · City Permit System</div>
+      </header>
+
+      <div class="chat-messages" id="messages">
+        <div class="welcome-card">
+          <div class="welcome-icon">🏗</div>
+          <h2 class="welcome-title">Permit & Inspection Agent</h2>
+          <p class="welcome-text">
+            I handle building permits and inspection scheduling for <strong>Construction with Style</strong>
+            in San José, CA. Tell me what you need — pull a permit, schedule an inspection,
+            or ask about requirements and fees.
+          </p>
+          <div class="welcome-badges">
+            <span class="badge">Building Permits</span>
+            <span class="badge">Inspection Scheduling</span>
+            <span class="badge">Fee Estimates</span>
+            <span class="badge">San José, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-area">
+        <div class="input-wrapper">
+          <textarea
+            id="userInput"
+            placeholder="Ask about permits, inspections, fees, or requirements..."
+            rows="1"
+            autocomplete="off"
+          ></textarea>
+          <button id="sendBtn" class="send-btn" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+        <div class="input-hint">
+          Payment authorization required before any fees are processed.
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
